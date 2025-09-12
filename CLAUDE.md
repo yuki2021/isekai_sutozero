@@ -24,8 +24,9 @@ This is a novel writing project for "神とストゼロと女騎士 ~限界OLと
 │   ├── source-material.md     # Source material references
 │   └── characters/
 │       └── main_characters.md # Character profiles and relationships
-├── manuscript/                 # Novel chapters (currently empty)
-├── reference/                  # Reference materials (currently empty)
+├── manuscript/                 # Novel chapters
+│   └── chapters/               # Individual chapter files
+├── reference/                  # Reference materials
 └── CLAUDE.md                  # This file
 ```
 
@@ -53,8 +54,8 @@ This is a novel writing project for "神とストゼロと女騎士 ~限界OLと
 ### Before Writing New Chapters
 
 Always reference these files first:
-- `.claude/config.md` - Writing style and format requirements
-- `.claude/instructions.md` - Specific writing instructions
+- `.claude/config.md` - Comprehensive writing style, format, and character settings
+- `.claude/instructions.md` - Detailed step-by-step writing instructions and quality guidelines
 - `planning/overview.md` - Theme and character relationship details
 - `planning/plot.md` - Detailed chapter outlines
 - `planning/characters/main_characters.md` - Character personalities and backgrounds
@@ -62,8 +63,8 @@ Always reference these files first:
 ### File Naming Convention
 
 New chapters should be saved as:
-- `manuscript/chapter-01.md`
-- `manuscript/chapter-02.md`
+- `manuscript/chapters/chapter-01.md`
+- `manuscript/chapters/chapter-02.md`
 - etc.
 
 ## Development Notes
@@ -72,4 +73,4 @@ This is a creative writing project with no traditional build/test commands. The 
 1. Referencing planning materials
 2. Writing chapters in markdown format
 3. Maintaining character consistency and plot coherence
-4. Ensuring appropriate chapter length (2000 words per chapter target)
+4. Ensuring appropriate chapter length (8,000-15,000 characters per chapter target)
