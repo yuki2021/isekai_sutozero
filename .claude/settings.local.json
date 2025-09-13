@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__serena__get_current_config",
+      "mcp__serena__activate_project",
+      "mcp__serena__list_dir",
+      "Bash(cat:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(vivliostyle build:*)",
+      "Bash(vivliostyle:*)",
+      "mcp__serena__onboarding",
+      "mcp__serena__write_memory"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
