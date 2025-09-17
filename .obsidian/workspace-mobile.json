@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "manuscript/chapters/chapter-01.md",
+                "file": "manuscript/chapters/chapter-02.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter-01"
+              "title": "chapter-02"
             }
           }
         ]
@@ -98,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "manuscript/chapters/chapter-01.md",
+            "file": "manuscript/chapters/chapter-02.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "manuscript/chapters/chapter-01.md",
+            "file": "manuscript/chapters/chapter-02.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -131,7 +131,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "manuscript/chapters/chapter-01.md",
+            "file": "manuscript/chapters/chapter-02.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -156,6 +156,9 @@
   },
   "active": "722459d910e839db",
   "lastOpenFiles": [
+    "manuscript/chapters/chapter-01.md",
+    "manuscript/chapters/chapter-02.md",
+    "manuscript/chapters/chapter-03.md",
     "CLAUDE.md",
     "planning/characters/main_characters.md",
     "planning/source-material.md",
@@ -164,12 +167,9 @@
     "planning/overview.md",
     "planning",
     "manuscript/chapters/chapter-08.md",
-    "manuscript/chapters/chapter-02.md",
     "manuscript/chapters/chapter-06.md",
     "manuscript/chapters/chapter-07.md",
-    "manuscript/chapters/chapter-03.md",
     "manuscript/chapters/chapter-04.md",
-    "manuscript/chapters/chapter-01.md",
     "manuscript/chapters/chapter-05.md",
     "manuscript/vivliostyle.config.js",
     "manuscript/chapters",
