@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+  <html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>sotozero_novel</title>
+      <style>
+      @charset "UTF-8";
+      :root {
+        --font-size: 3.9466666666666663mm
+      }
+      html {
+      orphans: 1;
+      widows: 1;
+      color: black;
+      }
+
+      body{
+        writing-mode: vertical-rl;
+        color: black;
+      }
+
+      * {
+      margin: 0;
+      padding: 0;
+      }
+
+      @page {
+        size: 148mm 210mm;
+        block-size: calc(3.9466666666666663mm * 1.75 * 18 + (3.9466666666666663mm * 0.4));
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 8%;
+        margin-right: 8%;
+        /* 以下、マージンボックスに継承される */
+        font-size: 6pt;
+        font-family: "游明朝", "YuMincho", serif;
+        /* 本来不要（<span class="smaller"><span class="smaller">ルート要素の指定が継承される</span></span>）だが、現時点のvivliostyle.jsの制限により必要 */
+        vertical-align: top;
+      }
+
+      @page : first {
+        counter-reset: page 0;
+      }
+
+      @page :left {
+        margin-right: 6%;
+        margin-left: 10%;
+        @bottom-left {
+          content: "sotozero_novel 42字×18行 "counter(page)"";
+          margin-left: 0mm;
+          margin-bottom: 5%;
+          writing-mode: horizontal-tb;
+          font-size:10q;
+          /* CSS仕様上は@pageルール内に書けばよいが、現時点のvivliostyle.jsの制限によりここに書く */
+      }
+    }
+      
+      @page :right {
+        margin-left: 6%;
+        margin-right: 10%;
+        /* border-bottom: 1pt solid black; */
+      /* 右下ノンブル */
+      @bottom-right {
+          content: "sotozero_novel 42字×18行 "counter(page)"";
+          margin-right: 0mm;
+          margin-bottom: 5%;
+          writing-mode: horizontal-tb;
+          font-size:10q;
+          /* CSS仕様上は@pageルール内に書けばよいが、現時点のvivliostyle.jsの制限によりここに書く */
+      }
+      }
+  
+      html {
+      font-family: "游明朝", "YuMincho", serif;
+      font-weight: Medium;
+      text-align: justify;
+      hanging-punctuation: allow-end;
+      text-spacing: none;
+      }
+  
+      body{
+        break-before: left;
+
+        
+      }
+  
+      div#draft{
+        inline-size: calc(165.76mm + 0.5em);
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+      }
+
+      h1 {
+        /* 五行トリ2倍角 */
+        display:flex;
+        align-items: center;
+        block-size: calc(3.9466666666666663mm * 1.75 * 5);
+        /* フォント */
+        font-weight: Extrabold;
+        letter-spacing: 0.25em;
+        font-size: calc(3.9466666666666663mm * 2);
+        /* 字下げ */
+        text-indent: 0;
+        /* 直後の改ページ・改段禁止 */
+      }
+  
+      h2 {
+        /* 二行トリ1.6倍角 */
+        display:flex;
+        align-items: center;
+        block-size: calc(3.9466666666666663mm * 1.75 * 2);
+        /* フォント */
+        font-weight: Extrabold;
+        font-size: calc(3.9466666666666663mm * 1.6);
+        /* 字下げ */
+        text-indent: calc(3.9466666666666663mm * 1 * 1);
+        /* 直後の改ページ・改段禁止 */
+      }
+
+      h3 {
+        /* 一行トリ1.2倍角 */
+        display:flex;
+        align-items: center;
+        block-size: calc(3.9466666666666663mm * 1.75);
+        /* フォント */
+        font-weight: demi-bold;
+        font-size: calc(3.9466666666666663mm * 1.2);
+        /* 字下げ */
+        text-indent: calc(3.9466666666666663mm * 1 * 1);
+        /* 直後の改ページ・改段禁止 */
+        page-break-after:avoid;
+      }
+
+      h4,h5,h6 {
+        /* 一行トリ1.2倍角 */
+        display:flex;
+        align-items: center;
+        block-size: calc(3.9466666666666663mm * 1.75);
+        /* フォント */
+        font-weight: demi-bold;
+        font-size: calc(3.9466666666666663mm * 1);
+        /* 字下げ */
+        text-indent: calc(3.9466666666666663mm * 1 * 1);
+        /* 直後の改ページ・改段禁止 */
+        page-break-after:avoid;
+      }
+
+      h1 + h2 {
+      margin-block-start: 16pt;
+      }
+
+      p + h3 {
+        margin-block-start: calc(3.9466666666666663mm * 1.75);
+      }
+      
+      p.ruby-offset {
+       margin-right: -0.15em;
+      }
+
+      body.vertical-rl ruby > rt {
+        font-size: 0.5em;
+        width: 0.75em;
+      }
+
+      body.horizontal-tb ruby > rt {
+        font-size: 0.5em;
+        width: 0.75em;
+      }
+
+      p {
+        font-size: 3.9466666666666663mm;
+        line-height: 1.75;
+        inline-size: calc(165.76mm + 0.5em);
+        text-indent: 0em;
+        hanging-punctuation: allow-end;
+        line-break:strict;
+        page-break-inside: auto;
+      }
+
+    div.indent-1 p:first-of-type, div.indent-2 p:first-of-type, div.indent-3 p:first-of-type{
+      padding-block-start: calc( 3.9466666666666663mm * 1.75);
+      }
+
+      div.indent-1 p:last-of-type, div.indent-2 p:last-of-type, div.indent-3 p:last-of-type{
+      padding-block-end: calc( 3.9466666666666663mm * 1.75);
+      }
+
+    
+    div.indent-1 p{
+    inline-size: calc( calc(165.76mm + 0.5em) - 3.9466666666666663mm);
+    padding-inline-start: calc( 3.9466666666666663mm);
+    }
+
+    div.indent-2 p{
+    inline-size: calc( calc(165.76mm + 0.5em) - (3.9466666666666663mm * 2));
+    padding-inline-start: calc(3.9466666666666663mm * 2);
+    }
+
+    div.indent-3 p{
+    inline-size: calc( calc(165.76mm + 0.5em) - (3.9466666666666663mm * 3));
+    padding-inline-start: calc(3.9466666666666663mm * 3);
+    }
+
+    p.goth {
+    margin-inline-start: 3em;
+    font-family: "游ゴシック", "YuGothic", san-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    }
+
+    p.align-rb {
+    text-align: end;
+    }
+
+    p.goth + p.goth {
+    margin-block-start: -1em;
+    }
+
+    div.codes {
+    display: inline-block;
+    margin: 3em 1em;
+    writing-mode: horizontal-tb;
+    padding: 1em;
+    font-family: "Courier", monospace;
+    font-size: 0.8em;
+    }
+  
+    div.codes p {
+    text-orientation: sideways;
+    }
+
+    p.star {
+    text-indent: 3em;
+    margin-right: 16pt;
+    margin-left: 16pt;
+    }
+
+    hr {
+    border: none;
+    border-right: 1pt solid black;
+    block-size: 6em;
+    margin: auto 8.5pt;
+    }
+
+    /* 縦中横 */
+    .tcy {
+    -webkit-text-combine: horizontal;
+    text-combine: horizontal;
+    -ms-text-combine-horizontal: all;
+    text-combine-horizontal: digit 2;
+    text-combine-upright: digit 2;
+    }
+
+    span.bottom {
+      display: block;
+      float: right;
+    }
+    
+    span.bottom-1 {
+      display: block;
+      float: right;
+      padding-inline-end: 1em;
+    }
+    
+    span.bottom-2 {
+      display: block;
+      float: right;
+      padding-inline-end: 2em;
+    }
+    
+    span.bottom-3 {
+      display: block;
+      float: right;
+      padding-inline-end: 3em;
+    }
+        
+
+    /* 圏点（<span class="smaller">ゴマ</span>） */
+    em.side-dot, em.sesame_dot {
+    font-style: normal;
+    -webkit-text-emphasis-style: sesame;
+    text-emphasis-style: sesame;
+    margin-block-start: -1em;
+    display: inline-block;
+    }
+
+    /*著作者*/
+    .author {
+    position: absolute;
+    bottom: 0;
+    font-size: 8.5pt;
+    margin-inline-start: 50pt;
+    letter-spacing: normal;
+    }
+
+    /*画像＋キャプション*/
+    figure {
+    display: block;
+    width: 236pt;
+    -ms-writing-mode: lr-tb;
+    -webkit-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
+    }
+
+    figure img {
+    width: 100%;
+    block-size: auto;
+    vertical-align: bottom;
+    }
+
+    figcaption {
+    text-align: start;
+    font-size: 7pt;
+    }
+
+    /*奥付*/
+    .colophon {
+    font-size: 7pt;
+    margin-right: 48pt;
+    }
+    /* 級さげ */
+    span.smaller{
+        font-size:6.5pt
+    }
+  
+    div.comment {
+        display:none;
+    }
+
+    p.blank {
+        color:transparent;
+    }
+
+    span.blank{
+      display:none;
+    }
+    </style>
+  </head>
+  <body class="vertical-rl">
+  <div id="draft">
+  <h1 id="l-0">第3章　妹と過去とグラタン</h1><p id="l-1" class="blank">_</p><p id="l-2">日曜日の朝、リヴィアは唖然とした表情でカレンダーを見つめていた。そこには赤いマーカーで大きく丸印が付けられている。</p><p id="l-3" class="blank">_</p><p id="l-4">「今日はセリナが来る日だったわ……魔王軍からストゼロもらって喜んでたから忘れてた……」</p><p id="l-5" class="blank">_</p><p id="l-6">リヴィアが慌てて時計を見ると、もう午前<span class="tcy">10</span>時を過ぎている。</p><p id="l-7" class="blank">_</p><p id="l-8">「カエザル！　やばいわよ！　妹が来ちゃうの！　日曜日の<span class="tcy">11</span>時には来るって言ってたのに忘れてた！」</p><p id="l-9" class="blank">_</p><p id="l-10">「ああ、そうであるか。それは大変であるな」</p><p id="l-11" class="blank">_</p><p id="l-12">カエザルは、リヴィアに背を向けてゲームをしながら、のんびりと答えた。リヴィアは妹のセリナが来る時は大騒ぎするが、カエザルにとってはいつもの出来事である。</p><p id="l-13" class="blank">_</p><p id="l-14">リヴィアは慌ててキッチンの片隅に積んであるストゼロ空き缶タワーの撤去を始めた。いつもならセリナが来る前日の夜は夜通し掃除をするのだが、昨夜は魔王軍のヴァルグから巻き上げたストゼロを嬉しそうに飲んでいるうちに、酔い潰れて寝込んでしまったのだった。</p><p id="l-15" class="blank">_</p><p id="l-16">「あー、クソヤバい、マジヤバい！　こんなのセリナに見られたら何言われるかわかったもんじゃない！　カエザル！　なんで昨日起こしてくれなかったのよ！」</p><p id="l-17" class="blank">_</p><p id="l-18">キッチンの片隅には、相変わらずストゼロの空き缶が立派なタワーを築いている。昨夜飲んだ分も含めて、すでに<span class="tcy">10</span>缶近くが積み上がっていた。その光景は如実にこの部屋の持ち主のアルコール依存度を証明していた。</p><p id="l-19" class="blank">_</p><p id="l-20">「これ、マジでどうしよう……ゴミ袋に詰めても置くところないし、次のごみ収集日まで隠すところないし……」</p><p id="l-21" class="blank">_</p><p id="l-22">カエザルは涼しい顔でファンタを飲みながら答える。全くの他人事の様相だ。</p><p id="l-23" class="blank">_</p><p id="l-24">「普段からちゃんと片付けをしていればこんなことにはならないのである。そもそもキッチン周りの掃除は、今週はお主が当番であろう」</p><p id="l-25" class="blank">_</p><p id="l-26">「うっさい！　私だってねぇ、やる時はちゃんとやってるわよ！　たまたま今週は体調が良くなかったのよ！」</p><p id="l-27" class="blank">_</p><p id="l-28">「お主は、年中ストゼロを飲んで酔い潰れているだけである」</p><p id="l-29" class="blank">_</p><p id="l-30">リヴィアは慌てて積み上げてある空き缶をゴミ袋に詰め込む。ガシャガシャと音を立てる空き缶の音が、虚しく室内に響き渡る。リヴィアの涙ぐましい努力にも関わらず、ストゼロタワーは単に積み上げられたストゼロ入りゴミ袋の山に変わっただけだった。</p><p id="l-31" class="blank">_</p><p id="l-32">『ピンポーン』</p><p id="l-33" class="blank">_</p><p id="l-34">リヴィアの表情が凍りつく。慌てて部屋中の掃除をしてたのにも関わらず、隠蔽工作には失敗しており、部屋の至る所に脱ぎ散らした服やストゼロのはぐれ空き缶が転がっていた。</p><p id="l-35" class="blank">_</p><p id="l-36">「入ってもよろしいですか？　姉さん。女性が鍵を開けっぱなしにするのは不用心ですよ」</p><p id="l-37" class="blank">_</p><p id="l-38">玄関の扉を開けて一人の女性が入ってくる。それは、ウェーブした薄めの金髪を肩まで伸ばし、フェミニンなパステルピンクのブラウスに上品なベージュのスカートを合わせた、雑誌から抜け出してきたような洗練された装いの女性だった。</p><p id="l-39" class="blank">_</p><p id="l-40">セリナ・クロスフィード、<span class="tcy">26</span>歳。リヴィアの妹で、元聖女である。</p><p id="l-41" class="blank">_</p><p id="l-42" class="blank">_</p><p id="l-43" class="blank">_</p><p id="l-44">長い栗色の髪を上品にまとめ、清楚なワンピースに身を包んだ彼女は、どこからどう見ても勝ち組の女性だった。手には掃除道具の入ったバッグと、手作りらしき料理の入った紙袋を持っている。</p><p id="l-45" class="blank">_</p><p id="l-46">「あ、セリナ......」</p><p id="l-47" class="blank">_</p><p id="l-48">「相変わらずアルコールの匂いがしますこの部屋」</p><p id="l-49" class="blank">_</p><p id="l-50">セリナは部屋に入るなり、鋭く指摘した。さすが妹、容赦がない。</p><p id="l-51" class="blank">_</p><p id="l-52">「そ、そんなことないわよね〜♪」</p><p id="l-53" class="blank">_</p><p id="l-54">完全に棒読み。小学生の演技指導でももう少しマシである。</p><p id="l-55" class="blank">_</p><p id="l-56">「嘘をつくのはやめてください。あと、なぜカエザル君は朝からゲームをしているのですか？日曜の朝といえば『サザエさん』か『仮面ライダー』でしょう？」</p><p id="l-57" class="blank">_</p><p id="l-58">「おはようである、セリナ」</p><p id="l-59" class="blank">_</p><p id="l-60">カエザルは振り返って挨拶したが、手はコントローラーから離さない。画面では『大乱闘スマッシュブラザーズ』のピカチュウが敵を電撃で吹っ飛ばしていた。彼にとってセリナは、リヴィアを叱ってくれる都合の良い『お小言役』でもあった。まるでRPGの便利なNPCである。</p><p id="l-61" class="blank">_</p><p id="l-62">「まったく……」</p><p id="l-63" class="blank">_</p><p id="l-64">セリナはため息をつきながら、持参した掃除道具を取り出した。</p><p id="l-65" class="blank">_</p><p id="l-66">「姉さん、クローゼットを開けてみてください」</p><p id="l-67" class="blank">_</p><p id="l-68">「え、なんでよ？」</p><p id="l-69" class="blank">_</p><p id="l-70">「いいから開けなさいよ」</p><p id="l-71" class="blank">_</p><p id="l-72">恐る恐るクローゼットを開けると、そこには使い込まれた下着類が無造作に詰め込まれていた。しかも上下がバラバラで、明らかにしまむらの激安品ばかり。『しまむら下着コレクション2015〜2020』とでもタイトルを付けられそうな、ある意味歴史的価値のあるラインナップである。</p><p id="l-73" class="blank">_</p><p id="l-74">「これ……まだ同じものを着ているのですか？」</p><p id="l-75" class="blank">_</p><p id="l-76">セリナの声が震えている。</p><p id="l-77" class="blank">_</p><p id="l-78">「だって、まだ使えるじゃないのよ......」</p><p id="l-79" class="blank">_</p><p id="l-80">「姉さん、これは5年前に異世界で買ったものですよね？」</p><p id="l-81" class="blank">_</p><p id="l-82">「まあ、そうだけどさ......」</p><p id="l-83" class="blank">_</p><p id="l-84">「そして、これは……」</p><p id="l-85" class="blank">_</p><p id="l-86">セリナがベランダの方を見ると、洗濯物が干されていた。その中に、ゴムが完全に伸びきったラッコ柄の下着が風に揺れている。</p><p id="l-87" class="blank">_</p><p id="l-88">「あああああああ！」</p><p id="l-89" class="blank">_</p><p id="l-90">セリナが悲鳴を上げた。</p><p id="l-91" class="blank">_</p><p id="l-92">「姉さん！　下着を外に干すのはやめてください！　せめて柄物はやめてください！　というか、そのラッコ柄、<span class="tcy">10</span>年ものじゃないですか！」</p><p id="l-93" class="blank">_</p><p id="l-94">「これは戦場でも守ってくれた勝負パンツなのよ！<span class="tcy">10</span>年間、私の貞操と尊厳を守り抜いた戦友なのよ！」</p><p id="l-95" class="blank">_</p><p id="l-96">「もはや何と戦っているのか、私にはよくわかりません！というか、そのラッコたち、もはや原形をとどめてませんよ！？」</p><p id="l-97" class="blank">_</p><p id="l-98">セリナは涙目になりながら、ラッコ柄下着を室内に取り込んだ。</p><p id="l-99" class="blank">_</p><p id="l-100">「あと、冷蔵庫の中身も見せてください」</p><p id="l-101" class="blank">_</p><p id="l-102">「え、それはヤバいわよ......」</p><p id="l-103" class="blank">_</p><p id="l-104">観念したリヴィアが冷蔵庫を開けると、予想通りの惨状が広がっていた。マヨネーズとストゼロと賞味期限切れの味噌チューブ。それ以外には何もない。まるで『究極のミニマリスト』か『終末世界のサバイバー』の冷蔵庫である。</p><p id="l-105" class="blank">_</p><p id="l-106">「姉さん、これで生活しているのですか？」</p><p id="l-107" class="blank">_</p><p id="l-108">「コンビニ弁当だってあるじゃないの。ちゃんと野菜も入ってるしさ。ほら、ポテトサラダとか......あ、じゃがいもは野菜よね？」</p><p id="l-109" class="blank">_</p><p id="l-110">「それは野菜とは言いません！というか、ポテトサラダの『サラダ』は飾りです！騙されちゃダメです！」</p><p id="l-111" class="blank">_</p><p id="l-112">セリナは深くため息をつくと、持参した紙袋から手作りのグラタンを取り出した。</p><p id="l-113" class="blank">_</p><p id="l-114">「とりあえず、これを冷蔵庫に入れておきますね。今度から、もう少しまともな食事をしてください」</p><p id="l-115" class="blank">_</p><p id="l-116">「ありがとう、セリナ......」</p><p id="l-117" class="blank">_</p><p id="l-118">リヴィアは素直に謝った。妹の献身的な愛情が、胸に突き刺さる。</p><p id="l-119" class="blank">_</p><p id="l-120">「姉さんは昔、あんなに立派だったのに……」</p><p id="l-121" class="blank">_</p><p id="l-122">セリナがぽつりと呟いた。その言葉に、リヴィアは過去を思い出した。</p><p id="l-123" class="blank">_</p><p id="l-124">---</p><p id="l-125" class="blank">_</p><p id="l-126">異世界での日々——</p><p id="l-127" class="blank">_</p><p id="l-128">「姉さん、すごいです！」</p><p id="l-129" class="blank">_</p><p id="l-130">聖女見習いだったセリナが、目を輝かせてリヴィアを見上げていた。金色に輝く鎧を身にまとった女騎士は、確かに誇り高く美しかった。</p><p id="l-131" class="blank">_</p><p id="l-132">「世界を救う勇者なんて、憧れます！」</p><p id="l-133" class="blank">_</p><p id="l-134">あの頃のセリナは、いつも姉を尊敬の眼差しで見ていた。同時に、偉大すぎる姉への複雑な感情も抱えていたが、それでも誇りに思っていた。</p><p id="l-135" class="blank">_</p><p id="l-136">そんな頃、パーティには頼れる仲間たちがいた。</p><p id="l-137" class="blank">_</p><p id="l-138">「リヴィア、背中は任せろ！」</p><p id="l-139" class="blank">_</p><p id="l-140">騎士団隊長のレオが、いつものように力強く宣言する。短髪でワイルド系のイケメンである彼に、リヴィアは「ちょっといいな」と思っていた。</p><p id="l-141" class="blank">_</p><p id="l-142">戦場で背中を預け合う仲。いつしか芽生えた淡い恋心。</p><p id="l-143" class="blank">_</p><p id="l-144">「レオ……」</p><p id="l-145" class="blank">_</p><p id="l-146">しかし、エリュナの采配により、リヴィアは一人で転移先に送られた。セリナとレオは別の場所に転移させられ、再会した時には……</p><p id="l-147" class="blank">_</p><p id="l-148">「姉さん、紹介します。レオです」</p><p id="l-149" class="blank">_</p><p id="l-150">「よろしくお願いします、リヴィアさん」</p><p id="l-151" class="blank">_</p><p id="l-152">「セリは俺が守る！」</p><p id="l-153" class="blank">_</p><p id="l-154">2人は恋人同士になっていた。</p><p id="l-155" class="blank">_</p><p id="l-156">あの時の絶望感を、リヴィアは今でも覚えている。</p><p id="l-157" class="blank">_</p><p id="l-158">---</p><p id="l-159" class="blank">_</p><p id="l-160">「姉さん？」</p><p id="l-161" class="blank">_</p><p id="l-162">セリナの声で現実に引き戻された。</p><p id="l-163" class="blank">_</p><p id="l-164">「なんでもないわよ」</p><p id="l-165" class="blank">_</p><p id="l-166">「本当に、大丈夫ですか？　最近、またお酒の量が増えているような……」</p><p id="l-167" class="blank">_</p><p id="l-168">「私は悪くないわよ！」</p><p id="l-169" class="blank">_</p><p id="l-170">リヴィアは反射的に強弁した。いつものように、責任を他に転嫁するプロである。職場でもこのスキルを発揮して、上司から『責任転嫁の達人』と呼ばれている。</p><p id="l-171" class="blank">_</p><p id="l-172">「全部エリュナのせいよ！　あのクソ女神がめちゃくちゃな采配するからよ！転移先でガチャったら一人ぼっちだし、レオとセリナをくっつけたのもあいつの仕業よ！人生をめちゃくちゃにする天才よ！」</p><p id="l-173" class="blank">_</p><p id="l-174">「姉さん......」</p><p id="l-175" class="blank">_</p><p id="l-176">セリナの表情が悲しそうに曇った。</p><p id="l-177" class="blank">_</p><p id="l-178">「でも、姉さんが幸せじゃないと、私も幸せじゃないんです」</p><p id="l-179" class="blank">_</p><p id="l-180">その言葉に、リヴィアはハッとした。</p><p id="l-181" class="blank">_</p><p id="l-182">「セリナ......」</p><p id="l-183" class="blank">_</p><p id="l-184">「昔の姉さんは、世界で一番輝いて見えました。今でも、その姿を覚えています」</p><p id="l-185" class="blank">_</p><p id="l-186">セリナの目に涙が浮かんでいた。</p><p id="l-187" class="blank">_</p><p id="l-188">「だから、諦めません。姉さんがまた笑顔になれるまで、私はずっとここにいます」</p><p id="l-189" class="blank">_</p><p id="l-190">「......ごめんなさい」</p><p id="l-191" class="blank">_</p><p id="l-192">リヴィアは素直に謝った。妹の無償の愛に、胸が締め付けられる。</p><p id="l-193" class="blank">_</p><p id="l-194">「いいえ、謝らないでください。ただ、もう少しだけ、自分を大切にしてください」</p><p id="l-195" class="blank">_</p><p id="l-196">セリナは掃除を終えると、グラタンの温め方を説明して帰っていった。</p><p id="l-197" class="blank">_</p><p id="l-198">一人になったリヴィアは、冷蔵庫から手作りのグラタンを取り出した。レンジで温めて、一人で食卓に座る。</p><p id="l-199" class="blank">_</p><p id="l-200">「美味しい......」</p><p id="l-201" class="blank">_</p><p id="l-202">温かいグラタンが、冷えた心を少しだけ温めてくれた。妹の愛情がこもった手料理に、涙が頬を伝った。</p><p id="l-203" class="blank">_</p><p id="l-204">「カエザル、あんたも食べる？」</p><p id="l-205" class="blank">_</p><p id="l-206">「ああ、いただかせてもらおう」</p><p id="l-207" class="blank">_</p><p id="l-208">2人で分け合って食べるグラタンは、いつものコンビニ弁当とは全然違っていた。</p><p id="l-209" class="blank">_</p><p id="l-210">その夜、リヴィアは久しぶりにストゼロを控えめにした。まだ少しだけ、妹への罪悪感が残っていたからである。</p><p id="l-211" class="blank">_</p><p id="l-212">「明日からは、もう少しまともに生活しようかな......」</p><p id="l-213" class="blank">_</p><p id="l-214">そんな風に思ったが、翌日にはまた同じような生活に戻ってしまうのが、リヴィア・クロスフィールドという女性だった。まさに『3日坊太郎』の心境である。「明日から本気でダイエットする」と「明日から本気で勉強する」と「明日から本気で禁酒する」を毎日唱えている。</p><p id="l-215" class="blank">_</p><p id="l-216">それでも、妹の愛情は確かに心に届いている。セリナの手紙が物語るように、諦めない愛情が、いつかリヴィアを救うことになるのかもしれない。ただし、その日が来るまでにリヴィアがアルコール中毒で入院しないことを祈るばかりである。</p><p id="l-217" class="blank">_</p>
+  </div>
+  </body>
+  </html>
