@@ -15,7 +15,8 @@
       "mcp__serena__read_memory",
       "Bash(env)",
       "mcp__serena__find_file",
-      "mcp__serena__search_for_pattern"
+      "mcp__serena__search_for_pattern",
+      "Read(//Users/yuukinagata/Library/CloudStorage/GoogleDrive-ordinary.plusminus1@gmail.com/マイドライブ/創作/sotozero_novel/manuscript/chapters/**)"
     ],
     "deny": [],
     "ask": []
